@@ -1,0 +1,33 @@
+body{
+	background-color: #E8C268;
+}
+h1 {
+	color: #C92F2E;
+}
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+}
+#ca{
+  width: 300px;
+  height: 70px;
+
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+#D-button{
+	float: right;
+}
