@@ -12,28 +12,25 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  // GET route for getting all of the todos
+  // GET route for getting all of the burgers
   app.get("/", function(req, res) {
     // findAll returns all entries for a table when used with no options
     db.Burger.findAll({}).then(function(dbBurger) {
-      // We have access to the todos as an argument inside of the callback function
+      // We have access to the burgers as an argument inside of the callback function
           var hbsObject = {
       burgers: dbBurger
     };
-    console.log(hbsObject);
-      console.log(dbBurger);
     res.render("index", hbsObject);
     });
   });
   app.get("/api/burgers", function(req, res) {
     // findAll returns all entries for a table when used with no options
     db.Burger.findAll({}).then(function(dbBurger) {
-      // We have access to the todos as an argument inside of the callback function
-      console.log(dbBurger);
+
     });
   });
 
-  // POST route for saving a new todo
+  // POST route for saving a new burger
   app.post("/", function(req, res) {
     // create takes an argument of an object describing the item we want to
     // insert into our table. In this case we just we pass in an object with a text
@@ -68,7 +65,6 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then(function(dbBurger) {
-      // res.json(dbBurger);
 
     res.redirect("/");
     })
