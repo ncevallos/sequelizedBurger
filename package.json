@@ -1,5 +1,5 @@
 {
-  "name": "burger",
+  "name": "sequelizedburger",
   "version": "1.0.0",
   "description": "A restaurant app that lets users input the names of burgers they'd like to eat, and then eat them.",
   "main": "server.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ncevallos/burger.git"
+    "url": "git+https://github.com/ncevallos/sequelizedburger.git"
   },
   "keywords": [
     "burger"
@@ -17,9 +17,9 @@
   "author": "Natasha Cevallos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ncevallos/burger/issues"
+    "url": "https://github.com/ncevallos/sequelizedburger/issues"
   },
-  "homepage": "https://github.com/ncevallos/burger#readme",
+  "homepage": "https://github.com/ncevallos/sequelizedburger#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.15.5",
@@ -27,5 +27,6 @@
     "method-override": "^2.3.9",
     "mysql": "^2.14.1",
     "sequelize": "^4.15.0"
-  }
+  },
+  "devDependencies": {}
 }
