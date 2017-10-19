@@ -14,6 +14,7 @@ module.exports = function(app) {
 
   // GET route for getting all of the todos
   app.get("/", function(req, res) {
+    console.log("got into /");
     // findAll returns all entries for a table when used with no options
     db.Burger.findAll({}).then(function(dbBurger) {
       // We have access to the todos as an argument inside of the callback function
