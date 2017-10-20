@@ -14,23 +14,19 @@ module.exports = function(app) {
 
   // GET route for getting all of the todos
   app.get("/", function(req, res) {
-    console.log("got into /");
     // findAll returns all entries for a table when used with no options
     db.Burger.findAll({}).then(function(dbBurger) {
       // We have access to the todos as an argument inside of the callback function
           var hbsObject = {
       burgers: dbBurger
     };
-    console.log(hbsObject);
-      console.log(dbBurger);
     res.render("index", hbsObject);
     });
   });
   app.get("/api/burgers", function(req, res) {
     // findAll returns all entries for a table when used with no options
     db.Burger.findAll({}).then(function(dbBurger) {
-      // We have access to the todos as an argument inside of the callback function
-      console.log(dbBurger);
+      // We have access to the burgers as an argument inside of the callback function
     });
   });
 
@@ -43,7 +39,7 @@ module.exports = function(app) {
       burger_name: req.body.burger_name,
       devoured: req.body.devoured
     }).then(function(dbBurger) {
-      // We have access to the new todo as an argument inside of the callback function
+      // We have access to the new burger as an argument inside of the callback function
 
       res.redirect("/");
     })
